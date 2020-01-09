@@ -2,7 +2,7 @@
 
 -- Display the ProductName and CategoryName for all products in the database. Shows 77 records.
 
-SELECT p.ProductName, c.CategoryName FROM Product AS P 
+SELECT P.ProductName, C.CategoryName FROM Product AS P 
 JOIN Category AS C 
 ON P.CategoryId = C.Id
 
@@ -23,4 +23,5 @@ ORDER BY ProductName ASC;
 
 SELECT O.Id AS OrderId, C.CompanyName AS CompanyName, E.LastName AS LastName FROM "Order" as O
 JOIN Customer AS C ON C.Id = O.CustomerId
+--must pay attention to foreign key ids
 JOIN Employee AS E ON E.Id = O.EmployeeId;
